@@ -8,23 +8,23 @@ Quando(/^enviar o formulário$/) do
 end
 
 Quando(/^preencher os dados de um triângulo equilátero$/) do
-  page(Triangle).fill_side1('1')
-  page(Triangle).fill_side2('1')
-  page(Triangle).fill_side3('1')
+  page(Triangle).fill_side1(1)
+  page(Triangle).fill_side2(1)
+  page(Triangle).fill_side3(1)
   step 'enviar o formulário'
 end
 
 Quando(/^preencher os dados de um triângulo isósceles$/) do
-  page(Triangle).fill_side1('1')
-  page(Triangle).fill_side2('1')
-  page(Triangle).fill_side3('2')
+  page(Triangle).fill_side1(1)
+  page(Triangle).fill_side2(1)
+  page(Triangle).fill_side3(2)
   step 'enviar o formulário'
 end
 
 Quando(/^preencher os dados de um triângulo escaleno$/) do
-  page(Triangle).fill_side1('1')
-  page(Triangle).fill_side2('2')
-  page(Triangle).fill_side3('3')
+  page(Triangle).fill_side1(1)
+  page(Triangle).fill_side2(2)
+  page(Triangle).fill_side3(3)
   step 'enviar o formulário'
 end
 

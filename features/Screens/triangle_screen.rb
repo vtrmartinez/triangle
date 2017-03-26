@@ -31,6 +31,7 @@ class Triangle < Calabash::ABase
   end
 
   def btn_calculate
+    hide_soft_keyboard
     element_validate('btnCalcular')
     touch("* id:'btnCalcular'")
   end
