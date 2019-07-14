@@ -1,33 +1,33 @@
-Dado(/^que acesso o aplicativo$/) do
+Dado(/^I launch app$/) do
   page(Triangle).text_validate('TrianguloApp')
   page(Triangle).element_validate('content', 'layout_componentes')
 end
 
-Quando(/^enviar o formulário$/) do
+Quando(/^I send the form$/) do
   page(Triangle).btn_calculate
 end
 
-Quando(/^preencher os dados de um triângulo equilátero$/) do
+Quando(/^I fill the sides of the equilateral triangle$/) do
   page(Triangle).fill_side1(1)
   page(Triangle).fill_side2(1)
   page(Triangle).fill_side3(1)
-  step 'enviar o formulário'
+  step 'I send the form'
 end
 
-Quando(/^preencher os dados de um triângulo isósceles$/) do
+Quando(/^I fill the sides of the isosceles triangle$/) do
   page(Triangle).fill_side1(1)
   page(Triangle).fill_side2(1)
   page(Triangle).fill_side3(2)
-  step 'enviar o formulário'
+  step 'I send the form'
 end
 
-Quando(/^preencher os dados de um triângulo escaleno$/) do
+Quando(/^I fill the sides of the scalene triangle$/) do
   page(Triangle).fill_side1(1)
   page(Triangle).fill_side2(2)
   page(Triangle).fill_side3(3)
-  step 'enviar o formulário'
+  step 'I send the form'
 end
 
-Então(/^devo visualizar a mensagem "([^"]*)"$/) do |message|
+Então(/^I must see the message "([^"]*)"$/) do |message|
   page(Triangle).validate_message(message)
 end

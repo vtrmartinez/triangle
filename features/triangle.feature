@@ -1,31 +1,28 @@
-#encoding: utf-8
-#language: pt
-
-Funcionalidade: Triângulo
-	Eu como usuário
-	Quero acessar o aplicativo TrianguloApp
-	Para obter informações de um triângulo
+Feature: Triangle
+	As a user
+	I want to access the triangle app
+	So that I will see some informations about triangle sides
 
 @regression
-Cenário: Enviar formulário em branco
-  Dado que acesso o aplicativo
-  Quando enviar o formulário
-  Então devo visualizar a mensagem "Preencha todos os campos"
+Scenario: Sending empty form
+  Given I launch app
+  When I send the form
+  Then I must see the message "Preencha todos os campos"
 
 @regression
-Cenário: Calcular os lados de um triângulo equilátero
-  Dado que acesso o aplicativo
-  Quando preencher os dados de um triângulo equilátero
-  Então devo visualizar a mensagem "O triângulo é Equilátero"
+Scenario: Calculate the sides of equilateral triangle
+  Given I launch app
+  When I fill the sides of the equilateral triangle
+  Then I must see the message "O triângulo é Equilátero"
 
 @regression
-Cenário: Calcular os lados de um triângulo isósceles
-  Dado que acesso o aplicativo
-  Quando preencher os dados de um triângulo isósceles
-  Então devo visualizar a mensagem "O triângulo é Isósceles"
+Scenario: Calculate the sides of isosceles triangle
+  Given I launch app
+  When I fill the sides of the isosceles triangle
+  Then I must see the message "O triângulo é Isósceles"
 
 @regression
-Cenário: Calcular os lados de um triângulo escaleno
-  Dado que acesso o aplicativo
-  Quando preencher os dados de um triângulo escaleno
-  Então devo visualizar a mensagem "O triângulo é Escaleno"
+Scenario: Calculate the sides of scalene triangle
+  Given I launch app
+  When I fill the sides of the scalene triangle
+  Then I must see the message "O triângulo é Escaleno"
